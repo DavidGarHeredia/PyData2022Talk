@@ -22,7 +22,7 @@ After the code has been run. You can give it another try by running:
 
 or 
 
-`@time solve_problem_using_dynamic_programming(knapsack_weight, items)@time solve_problem_using_dynamic_programming(knapsack_weight, items)`
+`@time solve_problem_using_dynamic_programming(knapsack_weight, items)`
 
 To execute the code **as a script**, exit the current Julia session. You can do it
 pressing `ctrl + d` or typing `exit()`. Then, run this in the terminal:
