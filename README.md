@@ -5,7 +5,7 @@
 Prior to executing the code:
 1. Install [Julia](https://julialang.org/) if you don't have it yet.
 2. Open a terminal and clone the repo.
-3. Go to the code directory. In Unix-like systems: `cd PyData2022Talk/code`
+3. Go to the `code` directory. In Unix-like systems: `cd PyData2022Talk/code`
 4. Execute `julia -t 4` to start a Julia session with 4 threads. 
 5. Activate the Pkg manager by typing `]`
 6. Run `activate .` and then `instantiate`
@@ -13,10 +13,10 @@ Prior to executing the code:
 To execute the code **from the current julia session** run:
 `include("knapsack.jl")`
 
-The first time will take time. Dependencies must be built (JuMP may be a bit expensive!)
+This first run will take some time. Dependencies must be built (JuMP may be a little bit expensive!)
 and the functions to execute compiled.
 
-After the code has been run. You can give it another try by running:
+After the code has run. You can give it another try (it will be much faster) by running:
 
 `@time solve_problem_using_jump(knapsack_weight, items)`
 
@@ -25,12 +25,12 @@ or
 `@time solve_problem_using_dynamic_programming(knapsack_weight, items)`
 
 To execute the code **as a script**, exit the current Julia session. You can do it
-pressing `ctrl + d` or typing `exit()`. Then, run this in the terminal:
+by pressing `ctrl + d` or typing `exit()`. Then, run this in the terminal:
 
 `julia --project=. -t 4 knapsack.jl`
 
 Note that it is taking longer than the 2nd execution in the Julia session because
-the code is compiled again.
+the code hast to be compiled again.
 
 ## Understanding the output
 
@@ -71,7 +71,7 @@ Total time (CPU seconds):       0.41   (Wallclock seconds):       0.33
 ```
 
 The last line says that it has taken about 11 seconds to execute the function. However,
-notice later in that line, it says that about 97% of the time was spent on the compilation.
+notice later in that line it says that about 97% of the time was spent on the compilation.
 It also says that about 6% of the time was spent by the Garbage Collector. As you can tell,
 the numbers don't add up. Obviously, the measures were not very accurate. However, it is
 clear that if we execute the function once more, the running time will be way much better (try it!).
