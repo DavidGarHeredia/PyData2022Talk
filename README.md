@@ -16,7 +16,7 @@ To execute the code **from the current julia session** run:
 This first run will take some time. Dependencies must be built (JuMP may be a little bit expensive!)
 and the functions to execute compiled.
 
-After the code has run. You can give it another try (it will be much faster) by running:
+After the code has run, you can give it another try (it will be much faster) by running:
 
 `@time solve_problem_using_jump(knapsack_weight, items)`
 
